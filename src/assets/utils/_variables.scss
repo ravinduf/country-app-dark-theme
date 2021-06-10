@@ -1,0 +1,18 @@
+$element--dark: hsl(209, 23%, 22%);
+$bg--dark: hsl(207, 26%, 17%);
+$text--light: hsl(200, 15%, 8%);
+$input--light:  hsl(0, 0%, 52%);
+$bg--light: hsl(0, 0%, 98%);
+$text--dark: hsl(0, 0%, 100%);
+$element--light: hsl(0, 0%, 100%);
+
+$themes: (
+  default: (
+    bg: $bg--light,
+    text: $text--light,
+  ),
+  dark: (
+    bg: $bg--dark,
+    text: $text--dark,
+  ),
+);

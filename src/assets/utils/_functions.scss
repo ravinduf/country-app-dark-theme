@@ -1,0 +1,8 @@
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
+
+@function t($key) {
+    @return map-get($theme-map, $key);
+}
