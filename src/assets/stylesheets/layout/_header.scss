@@ -1,28 +1,43 @@
 .header{
-  
-  .container {
+  padding: toRem(20) 0;
+
+  @include desktop-only{
     padding: toRem(10) 0;
-    width: 90%;
+  }
+
+  @include themed{
+    background-color: t($element);
+  }
+  .container {
+    padding: toRem(20) 0;
+    width: 85%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    @include desktop-only{
+      width: 90%;
+    }
   }
 
-  h3{
-    font-weight: 600;
+  h4{
+    font-weight: 800;
+    font-size: toRem(20);
     align-items: center;
     margin-bottom: 0 !important;
+    
     
   }
 
   svg{
     height: toRem(25);
-    // position: absolute;
-    // align-items: center;
+    margin-right: toRem(5);
+    
   }
 
   span{
     cursor: pointer;
+    font-weight: 300;
   }
 }

@@ -8,3 +8,17 @@
 
 @import "./layout/header";
 
+
+.app{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  // height: fit-content;
+  
+  @include themed{
+    background-color: t($bg);
+    color: t($text);
+  }
+}

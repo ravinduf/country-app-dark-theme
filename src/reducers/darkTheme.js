@@ -1,7 +1,7 @@
 import { DARK_THEME_ON, DARK_THEME_OFF } from '../actions/types'
 
 const initialState = {
-    dark: false,
+    dark: true,
 }
 
 const darkTheme = (state = initialState, action) => {
@@ -11,7 +11,7 @@ const darkTheme = (state = initialState, action) => {
         case DARK_THEME_OFF:
             return { ...state, dark: false }
         default:
-            return state
+            return state;
     }
 }
 

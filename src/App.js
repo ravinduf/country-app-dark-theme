@@ -10,7 +10,10 @@ function App() {
   return (
     <div className={classNames('theme', dark ? 'theme--dark' : 'theme--default')}>
       {/* className={'theme ' + (dark ? 'theme--dark' : 'theme--default') */}
-      <Header />
+      <div className="app">
+        <Header />
+      </div>
+      
     </div>
   );
 }

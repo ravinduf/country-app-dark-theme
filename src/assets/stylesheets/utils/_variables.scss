@@ -6,14 +6,21 @@ $bg--light: hsl(0, 0%, 98%);
 $text--dark: hsl(0, 0%, 100%);
 $element--light: hsl(0, 0%, 100%);
 
+
+$bg: 'bg';
+$text: 'text';
+$element: 'element';
+
 $themes: (
   default: (
     bg: $bg--light,
     text: $text--light,
+    element: $element--light,
   ),
   dark: (
     bg: $bg--dark,
     text: $text--dark,
+    element: $element--dark,
   ),
 );
 
