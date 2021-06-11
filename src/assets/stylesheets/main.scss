@@ -1,7 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
 @import "./base/base";
 
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
 @import "./utils/extensions";
+
+@import "./layout/header";
 

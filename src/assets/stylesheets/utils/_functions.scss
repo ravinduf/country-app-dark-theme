@@ -1,7 +1,8 @@
 @import "./variables";
 
 @function toRem($value) {
-    $remValue: ($value / 16) + rem; 
+    $remValue: ($value / 16)  + rem; 
+    // $remValue: ($value / 16) * 1em; 
     @return $remValue;
 }
 
