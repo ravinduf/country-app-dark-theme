@@ -15,8 +15,9 @@
   right: 0;
   left: 0;
   bottom: 0;
-  // height: fit-content;
-  
+  transition: background-color 800ms ease;
+  transition: color 800ms ease;
+
   @include themed{
     background-color: t($bg);
     color: t($text);
