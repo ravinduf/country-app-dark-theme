@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { changeToDarkTheme, changeToDefaultTheme} from '../../actions/darkTheme'
@@ -22,10 +22,8 @@ const Header = () => {
     dispatch(changeToDefaultTheme())
   }
 
-  useEffect(() => {
-    console.log("hello")
-    console.log(dark)
-  }, [dark])
+  // useEffect(() => {
+  // }, [dark])
   
   return (
     <Row className="header">
