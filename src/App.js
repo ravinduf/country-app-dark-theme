@@ -1,17 +1,14 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import classNames from 'classnames';
 
 function App() {
-  const [dark, setDark] = useState(true);
 
-  const handleDarkMode = () => {
-    setDark(prevState => !prevState)
-  }
+  const { dark } = useSelector((state) => state.darkTheme);
+
   return (
-    <div className={'theme ' + (dark ? 'theme--dark' : 'theme--default')}>
-      <div className="body">
+    <div className={classNames('theme', dark ? 'theme--dark' : 'theme--default')}>
+      {/* className={'theme ' + (dark ? 'theme--dark' : 'theme--default') */}
       <h1 className="heading">Hello</h1>
-      </div>
-      
     </div>
   );
 }
