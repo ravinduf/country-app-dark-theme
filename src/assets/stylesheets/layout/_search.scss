@@ -1,0 +1,38 @@
+.search {
+  width: 90%;
+  padding: toRem(10) toRem(0) toRem(10) toRem(16);
+  border-radius: toRem(8);
+  margin: toRem(30) auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  @include themed{
+    background-color: t($element)
+  }
+
+  svg {
+    height: toRem(20);
+    width: toRem(20);
+    align-self: center;
+  }
+
+  input {
+    width: 100%;
+    @include themed{
+      background-color: t($element);
+      color: t($input);
+      &::placeholder {
+        color: t($input);
+      }
+    }
+  }
+}
+
+.form-control{
+  border: 0;
+  &:focus{
+    border: 0;
+    box-shadow: none !important;
+  }
+}
