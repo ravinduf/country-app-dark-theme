@@ -1,11 +1,16 @@
 .search {
-  width: 90%;
-  padding: toRem(10) toRem(0) toRem(10) toRem(16);
+  width: 85%;
+  padding: toRem(8) toRem(0) toRem(8) toRem(16);
   border-radius: toRem(8);
-  margin: toRem(30) auto;
+  margin: toRem(0) auto;
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
+
+  @include desktop-only{
+    width: 60%;
+    margin-left: toRem(70);
+  }
 
   @include themed{
     background-color: t($element)

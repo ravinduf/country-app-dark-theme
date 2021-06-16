@@ -24,3 +24,7 @@
     color: t($text);
   }
 }
+
+.row{
+  --bs-gutter-x: 0 !important;
+}
