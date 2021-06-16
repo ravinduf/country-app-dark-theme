@@ -8,6 +8,9 @@
 
 @import "./layout/header";
 @import "./layout/search";
+@import "./layout/filter";
+
+@import "./components/filter-search-row";
 
 
 .app{
@@ -26,5 +29,5 @@
 }
 
 .row{
-  --bs-gutter-x: 0 !important;
+  --bs-gutter-x: 0;
 }

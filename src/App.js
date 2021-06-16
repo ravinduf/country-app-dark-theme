@@ -19,11 +19,11 @@ function App() {
       <div className="app">
         <Header />
 
-        <Row className="mt-5">
+        <Row className="mt-5 filter-search-row">
           <Col md={6}>
             <Search />  
           </Col>
-          <Col>
+          <Col md={3}>
             <Filter/>
           </Col>
         </Row>

@@ -1,9 +1,14 @@
-import React from 'react'
-
 const Filter = () => {
   return (
-    <div>
-      Filter
+    <div className="filter">
+      <select name="cars" id="cars">
+        <option readOnly hidden defaultValue>Filter by region</option>
+        <option value="">Africa</option>
+        <option value="">America</option>
+        <option value="">Asia</option>
+        <option value="">Europe</option>
+        <option value="">Oceania</option>
+      </select>
     </div>
   )
 }
