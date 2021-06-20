@@ -4,23 +4,35 @@
   margin-left: toRem(20);
   border-radius: 8px;
   overflow: hidden;
+  
   @include themed{
     background-color: t($element);
   }
 
   @include desktop-only{
-    margin-top: 0px;
-    position: relative;
-    right: 0px;
+    margin: 0px auto;
+    
   }
+
+  // select#xyz {
+  //   border:0px;
+  //   outline:0px;
+  // }
+
   select{
     border: 0;
+    outline: none;
     width: 80%;
-    padding: toRem(15) toRem(10);
+    padding: toRem(15) toRem(15);
+    
     @include themed{
       background-color: t($element);
-      color: t($text);
+      color: t($input);
     }
   }
    
+  option{
+    border: none;
+    
+  }
 }

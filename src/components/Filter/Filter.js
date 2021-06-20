@@ -1,7 +1,7 @@
 const Filter = () => {
   return (
     <div className="filter">
-      <select name="cars" id="cars">
+      <select>
         <option readOnly hidden defaultValue>Filter by region</option>
         <option value="">Africa</option>
         <option value="">America</option>
