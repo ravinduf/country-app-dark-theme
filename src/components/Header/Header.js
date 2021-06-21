@@ -14,7 +14,6 @@ const Header = () => {
   const dispatch = useDispatch()
 
   const changeDarkMode = () => {
-    console.log("hello")
     dispatch(changeToDarkTheme())
   }
 
