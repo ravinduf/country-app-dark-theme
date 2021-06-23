@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 import { useSelector } from 'react-redux';
 import classNames from 'classnames';
@@ -10,6 +10,7 @@ import Filter from './components/Filter/Filter';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
+import * as api from './api';
 // let api_url = process.env.REACT_APP_API_URL;
 
 function App() {
@@ -19,11 +20,24 @@ function App() {
 
   useEffect(() => {
     let api_url = process.env.REACT_APP_API_URL;
-    if (searchTerm.isSearchTerm){
-      api_url = `${api_url}/${searchTerm.url}/${searchTerm.searchTerm}`
+
+    const getData = async () => {
+      if (searchTerm.isSearchTerm) {
+        api_url = `${api_url}/${searchTerm.url}/${searchTerm.searchTerm}`;
+      } else {
+        api_url = `${api_url}/all`
+      }
+
+      try {
+        const { data } = await api.getCountries(api_url);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
     }
 
-   console.log(api_url);
+    getData()
+    console.log(api_url);
   }, [searchTerm])
 
 
@@ -35,14 +49,14 @@ function App() {
 
         <Row className="mt-5 filter-search-row">
           <Col md={6}>
-            <Search />  
+            <Search />
           </Col>
           <Col md={3}>
-            <Filter/>
+            <Filter />
           </Col>
         </Row>
       </div>
-      
+
     </div>
   );
 }
