@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useDispatch } from 'react-redux'
+
+import { setSearchTerm } from '../../actions/searchTerm';
 
 const Filter = () => {
-  const [region, setRegion] = useState("");
+  // const [region, setRegion] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    setRegion(e.target.value);
+    dispatch(setSearchTerm("region", e.target.value.toLowerCase()));
   }
 
   return (
