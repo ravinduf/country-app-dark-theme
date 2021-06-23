@@ -10,7 +10,7 @@ import Filter from './components/Filter/Filter';
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-let api_url = process.env.REACT_APP_API_URL;
+// let api_url = process.env.REACT_APP_API_URL;
 
 function App() {
 
@@ -18,6 +18,7 @@ function App() {
   const searchTerm = useSelector((state) => state.searchTerm);
 
   useEffect(() => {
+    let api_url = process.env.REACT_APP_API_URL;
     if (searchTerm.isSearchTerm){
       api_url = `${api_url}/${searchTerm.url}/${searchTerm.searchTerm}`
     }
