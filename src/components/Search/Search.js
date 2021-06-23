@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import debounce from 'lodash.debounce';
 
 import Form from 'react-bootstrap/Form'
-// import Row from 'react-bootstrap/Row'
 
 import { setSearchTerm } from '../../actions/searchTerm'
 
