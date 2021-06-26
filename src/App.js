@@ -32,12 +32,13 @@ function App() {
         const { data } = await api.getCountries(api_url);
         console.log(data);
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     }
 
     getData()
     console.log(api_url);
+
   }, [searchTerm])
 
 

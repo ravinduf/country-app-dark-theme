@@ -10,7 +10,7 @@ import { setSearchTerm } from '../../actions/searchTerm'
 const Search = () => {
   const dispatch = useDispatch();
   
-  const debouncedHandleChange = useCallback(
+  const debouncedHandleChange = (
     debounce((value) => dispatch(setSearchTerm("name",value)), 1000)
   );
 
