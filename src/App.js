@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import classNames from 'classnames';
 
 import Header from './components/Header/Header';
@@ -11,12 +11,15 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
 import * as api from './api';
+import { removeSearchTerm } from './actions/searchTerm';
+
 // let api_url = process.env.REACT_APP_API_URL;
 
 function App() {
 
   const { dark } = useSelector((state) => state.darkTheme);
   const searchTerm = useSelector((state) => state.searchTerm);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let api_url = process.env.REACT_APP_API_URL;
@@ -34,12 +37,15 @@ function App() {
       } catch (error) {
         console.log(error.message);
       }
+
+      dispatch(removeSearchTerm);
     }
 
     getData()
     console.log(api_url);
-
-  }, [searchTerm])
+    
+    // return () => {dispatch(removeSearchTerm())}
+  }, [searchTerm, dispatch])
 
 
   return (
