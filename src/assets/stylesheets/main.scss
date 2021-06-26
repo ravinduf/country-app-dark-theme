@@ -9,16 +9,12 @@
 @import "./layout/header";
 @import "./layout/search";
 @import "./layout/filter";
+@import "./layout/single-card-country";
 
 @import "./components/filter-search-row";
 
 
 .app{
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
   transition: background-color 1000ms ease-in;
   transition: color 500ms 100ms ease;
 

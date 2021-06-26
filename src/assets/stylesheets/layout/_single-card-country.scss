@@ -1,0 +1,6 @@
+.card {
+  border: 0;
+    @include themed{
+      background: t($element);
+  }
+}

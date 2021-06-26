@@ -13,10 +13,13 @@ import Col from 'react-bootstrap/Col'
 import * as api from './api';
 import { removeSearchTerm } from './actions/searchTerm';
 
+import CountryGrid from './components/CountryGrid/CountryGrid';
+
 // let api_url = process.env.REACT_APP_API_URL;
 
 function App() {
 
+  const [countries, setCountries] = useState([]);
   const { dark } = useSelector((state) => state.darkTheme);
   const searchTerm = useSelector((state) => state.searchTerm);
   const dispatch = useDispatch();
@@ -33,19 +36,34 @@ function App() {
 
       try {
         const { data } = await api.getCountries(api_url);
-        console.log(data);
+        setCountries(data);
       } catch (error) {
         console.log(error.message);
       }
-
       dispatch(removeSearchTerm);
     }
 
     getData()
-    console.log(api_url);
-    
+
     // return () => {dispatch(removeSearchTerm())}
   }, [searchTerm, dispatch])
+
+  console.log(countries)
+
+  const renderCountries = (
+    <div>
+      <Row className="mt-5 filter-search-row">
+        <Col md={6}>
+          <Search />
+        </Col>
+        <Col md={3}>
+          <Filter />
+        </Col>
+      </Row>
+
+      <CountryGrid countries={countries} />
+    </div>
+  );
 
 
   return (
@@ -53,17 +71,8 @@ function App() {
       {/* className={'theme ' + (dark ? 'theme--dark' : 'theme--default') */}
       <div className="app">
         <Header />
-
-        <Row className="mt-5 filter-search-row">
-          <Col md={6}>
-            <Search />
-          </Col>
-          <Col md={3}>
-            <Filter />
-          </Col>
-        </Row>
+        {renderCountries}
       </div>
-
     </div>
   );
 }
