@@ -10,8 +10,9 @@ const SingleCardCountry = ({country}) => {
       <Card.Body>
         <Card.Title>{ country.name }</Card.Title>
         <Card.Text>
-          Some quick example text to build on the card title and make up the bulk of
-          the card's content.
+         <span className="heading">Population</span>: { country.population.toLocaleString() }<br/>
+         <span className="heading">Region</span>: { country.region }<br/>
+         <span className="heading">Capital</span>: { country.capital }<br/>
         </Card.Text>
         {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
