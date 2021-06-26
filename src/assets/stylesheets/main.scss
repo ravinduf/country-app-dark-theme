@@ -10,11 +10,13 @@
 @import "./layout/search";
 @import "./layout/filter";
 @import "./layout/single-card-country";
+@import "./layout/country-grid";
 
 @import "./components/filter-search-row";
 
 
 .app{
+  min-height: 100%;
   transition: background-color 1000ms ease-in;
   transition: color 500ms 100ms ease;
 

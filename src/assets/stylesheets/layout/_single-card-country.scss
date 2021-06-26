@@ -1,6 +1,15 @@
 .card {
   border: 0;
-    @include themed{
-      background: t($element);
+  margin: toRem(16) 0;
+  width: 90%;
+
+  @include themed{
+    background: t($element);
   }
+
+  @include desktop-only{
+    margin: toRem(16) toRem(16);
+    width: 20%;
+  }
+
 }

@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 
 const SingleCardCountry = ({country}) => {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card>
       <Card.Img variant="top" src={country.flag} />
       <Card.Body>
         <Card.Title>{ country.name }</Card.Title>
