@@ -1,12 +1,13 @@
 .country-grid{
-  margin: auto;
-  width: 92%; 
+  margin: toRem(30) auto;
+   
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
 
   @include desktop-only{
+    width: 92%;
     justify-content: space-between;
   }
 }

@@ -1,7 +1,7 @@
 .card {
   border: 0;
   margin: toRem(16) 0;
-  width: 90%;
+  width: 80%;
 
   @include themed{
     background: t($element);
@@ -15,5 +15,5 @@
   .heading {
     font-weight: 600;
   }
-
+  
 }
