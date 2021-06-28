@@ -13,10 +13,11 @@
 @import "./layout/country-grid";
 
 @import "./components/filter-search-row";
+@import "./components/loading";
 
 
 .app{
-  min-height: 100%;
+  min-height: 100vh;
   transition: background-color 1000ms ease-in;
   transition: color 500ms 100ms ease;
 

@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { lazy, Suspense } from 'react'
+import Loading from '../Loading/Loading'
+// import SingleCardCountry from './SingleCardCountry/SingleCountryCard'
 
-import SingleCardCountry from './SingleCardCountry/SingleCountryCard'
+const SingleCardCountry = lazy(() => import('./SingleCardCountry/SingleCountryCard'))
 
 const CountryGrid = ({ countries }) => {
   return (
     <div className=" country-grid">
       {countries.map(country => (
-        <SingleCardCountry country={country} />
+        <Suspense fallback={(<Loading />)}>
+          <SingleCardCountry country={country} />
+        </Suspense>
       ))}
     </div>
   )
