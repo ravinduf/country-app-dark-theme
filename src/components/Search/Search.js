@@ -1,4 +1,3 @@
-import { useCallback } from 'react'
 import { ReactComponent as SearchSvg } from '../../assets/images/search.svg';
 import { useDispatch } from 'react-redux'
 import debounce from 'lodash.debounce';
