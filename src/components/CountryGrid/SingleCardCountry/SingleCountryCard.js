@@ -13,7 +13,6 @@ const SingleCardCountry = ({country}) => {
          <span className="heading">Region</span>: { country.region }<br/>
          <span className="heading">Capital</span>: { country.capital }<br/>
         </Card.Text>
-        {/* <Button variant="primary">Go somewhere</Button> */}
       </Card.Body>
     </Card>
   )
