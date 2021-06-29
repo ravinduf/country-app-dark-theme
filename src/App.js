@@ -21,6 +21,7 @@ function App() {
 
   const [countries, setCountries] = useState([]);
   const { dark } = useSelector((state) => state.darkTheme);
+  const selectedCountry = useSelector((state) => state.selectedCountry);
   const searchTerm = useSelector((state) => state.searchTerm);
   const dispatch = useDispatch();
 
@@ -48,8 +49,11 @@ function App() {
     // return () => {dispatch(removeSearchTerm())}
   }, [searchTerm, dispatch])
 
-  console.log(countries)
+  // useEffect(() => {
+  //   console.log(selectedCountry)
+  // }, [selectedCountry])
 
+  // console.log(country)
   const renderCountries = (
     <div>
       <Row className="mt-5 filter-search-row">
@@ -64,14 +68,19 @@ function App() {
       <CountryGrid countries={countries} />
     </div>
   );
-
+  
+  const singleCountry = (country) => (
+    <div>
+      {country.name}
+    </div>
+  )
 
   return (
     <div className={classNames('theme', dark ? 'theme--dark' : 'theme--default')}>
       {/* className={'theme ' + (dark ? 'theme--dark' : 'theme--default') */}
       <div className="app">
         <Header />
-        {renderCountries}
+        {!selectedCountry.isSelected ? (renderCountries) : (singleCountry(selectedCountry.country))}
       </div>
     </div>
   );
