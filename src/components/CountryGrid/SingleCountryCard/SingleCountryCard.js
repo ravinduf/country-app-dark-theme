@@ -1,10 +1,13 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import Card from 'react-bootstrap/Card';
 
-import Card from 'react-bootstrap/Card'
+import { setSelectedCountry } from '../../../actions/selectedCountry'
 
 const SingleCardCountry = ({country}) => {
+  const dispatch = useDispatch()
   return (
-    <Card>
+    <Card onClick={() => dispatch(setSelectedCountry(country))}>
       <Card.Img variant="top" src={country.flag} />
       <Card.Body>
         <Card.Title>{ country.name }</Card.Title>
