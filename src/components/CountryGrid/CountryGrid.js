@@ -7,8 +7,8 @@ const SingleCardCountry = lazy(() => import('./SingleCountryCard/SingleCountryCa
 const CountryGrid = ({ countries }) => {
   return (
     <div className=" country-grid">
-      {countries.map(country => (
-        <Suspense fallback={(<Loading />)}>
+      {countries.map((country, index) => (
+        <Suspense fallback={(<Loading />)} key={index}>
           <SingleCardCountry country={country} />
         </Suspense>
       ))}
