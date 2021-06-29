@@ -15,8 +15,6 @@ import { removeSearchTerm } from './actions/searchTerm';
 
 import CountryGrid from './components/CountryGrid/CountryGrid';
 
-// let api_url = process.env.REACT_APP_API_URL;
-
 function App() {
 
   const [countries, setCountries] = useState([]);
@@ -46,14 +44,9 @@ function App() {
 
     getData()
 
-    // return () => {dispatch(removeSearchTerm())}
   }, [searchTerm, dispatch])
 
-  // useEffect(() => {
-  //   console.log(selectedCountry)
-  // }, [selectedCountry])
 
-  // console.log(country)
   const renderCountries = (
     <div>
       <Row className="mt-5 filter-search-row">
@@ -68,7 +61,7 @@ function App() {
       <CountryGrid countries={countries} />
     </div>
   );
-  
+
   const singleCountry = (country) => (
     <div>
       {country.name}
