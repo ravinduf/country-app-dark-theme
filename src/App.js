@@ -14,6 +14,7 @@ import * as api from './api';
 import { removeSearchTerm } from './actions/searchTerm';
 
 import CountryGrid from './components/CountryGrid/CountryGrid';
+import CountryInfo from './components/CountryInfo/CountryInfo';
 
 function App() {
 
@@ -64,7 +65,7 @@ function App() {
 
   const singleCountry = (country) => (
     <div>
-      {country.name}
+      <CountryInfo country={country}/>
     </div>
   )
 
