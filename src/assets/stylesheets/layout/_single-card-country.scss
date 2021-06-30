@@ -8,7 +8,9 @@
   }
 
   @include desktop-only{
-    margin: toRem(16) toRem(16);
+    margin-top: toRem(16);
+    margin-right: toRem(56);
+    margin-bottom: toRem(16);
     width: 20%;
   }
 
