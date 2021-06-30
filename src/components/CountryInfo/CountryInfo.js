@@ -12,7 +12,9 @@ const CountryInfo = ({ country }) => {
   console.log(country)
   return (
     <div className="country-info">
-      <Button className="info-btn" onClick={() => dispatch(removeSelectedCountry())}>Back</Button>
+      <Button className="info-btn" onClick={() => dispatch(removeSelectedCountry())}>
+      <span>&#8592;</span>Back
+      </Button>
       <Row className="info">
         <Col className="info__image">
           <img src={country.flag } alt="" />
